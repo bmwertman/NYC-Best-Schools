@@ -17,7 +17,7 @@ development:
   encoding: unicode
   database: best_nyc_schools_development
   pool: 5
-  username: best_nyc_schools
+  username: Brad
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -43,13 +43,7 @@ test:
   encoding: unicode
   database: best_nyc_schools_test
   pool: 5
-  username: best_nyc_schools
+  username: Brad
   password:
 
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: best_nyc_schools_production
-  pool: 5
-  username: best_nyc_schools
-  password:
+
