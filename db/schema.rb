@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140114211702) do
+ActiveRecord::Schema.define(:version => 20140114212200) do
 
   create_table "apartments", :force => true do |t|
     t.integer  "school_zone_id"
@@ -34,6 +34,11 @@ ActiveRecord::Schema.define(:version => 20140114211702) do
 
   create_table "user_fave_apartments", :force => true do |t|
     t.integer "apartment_id"
+    t.integer "user_id"
+  end
+
+  create_table "user_fave_school_zones", :force => true do |t|
+    t.integer "school_zone_id"
     t.integer "user_id"
   end
 
