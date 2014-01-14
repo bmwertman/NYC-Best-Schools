@@ -1,5 +1,6 @@
 require File.expand_path('../boot', __FILE__)
-
+require 'rails/all'
+require 'active_record/connection_adapters/postgis_adapter/railtie'
 # Pick the frameworks you want:
 require "active_record/railtie"
 require "action_controller/railtie"
@@ -68,3 +69,4 @@ module BestNycSchools
     config.assets.initialize_on_precompile = false #Devise setting to deploy to Heroku
   end
 end
+require "#{Rails.root}/lib/rgeo"
