@@ -28,9 +28,7 @@ class ActiveRecordOverrideRailtie < Rails::Railtie
     ActiveSupport.on_load(:active_record) do
       if url = ENV['DATABASE_URL']
         ActiveRecord::Base.connection_pool.disconnect!
-        puts ENV.keys
-        ENV['HEROKU_POSTGRESQL_MAROON_URL']
-        parsed_url = URI.parse(ENV['HEROKU_POSTGRESQL_MAROON_URL'])
+        parsed_url = URI.parse(url)
         config =  {
           adapter:             'postgis',
           host:                parsed_url.host,
