@@ -1,6 +1,6 @@
 require File.expand_path('../boot', __FILE__)
 require 'rails/all'
-require 'active_record/connection_adapters/postgis_adapter/railtie'
+# require 'active_record/connection_adapters/postgis_adapter/railtie'
 # Pick the frameworks you want:
 require "active_record/railtie"
 require "action_controller/railtie"
