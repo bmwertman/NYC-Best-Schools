@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140115194228) do
+ActiveRecord::Schema.define(:version => 20140115211935) do
 
   create_table "apartments", :force => true do |t|
     t.integer  "school_zone_id"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(:version => 20140115194228) do
     t.string   "performance_grade"
     t.integer  "environment_score"
     t.string   "environment_grade"
+    t.integer  "dbn_num"
   end
 
   create_table "user_fave_apartments", :force => true do |t|

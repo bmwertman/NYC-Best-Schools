@@ -1,13 +1,14 @@
 require 'csv'
 CSV.foreach(File.path(Rails.root.join('lib', "ES_Zones_2013-2014.csv"))) do |column|
   SchoolZone.create({
-    shape_length: column[8],
-    shape_area: column[9]
+    shape_length: column[7],
+    shape_area: column[8],
+    dbn_num: column[10]
     })
 end
 
 CSV.foreach(File.path(Rails.root.join('lib', "primary_schools.csv"))) do |column|
-  SchoolZone.create({
+  SchoolZone.find_by_dbn_num(column[0]).update_attributes({
     district_num: column[1],
     school_name: column[2],
     school_level: column[3],
