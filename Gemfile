@@ -6,7 +6,8 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-
+gem 'rgeo'
+gem 'activerecord-postgis-adapter'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -24,6 +25,10 @@ gem 'jquery-rails'
 gem 'rspec-rails'
 gem 'capybara'
 gem 'devise'
+
+gem 'pry'
+gem 'pry-nav'
+
 # gem 'rgeo'
 # gem 'activerecord-postgis-adapter'
 

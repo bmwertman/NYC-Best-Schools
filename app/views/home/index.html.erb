@@ -1,3 +1,30 @@
-<h2>
-	Welcome Home
-</h2>
+<table>
+	<th>
+		<td>District</td>
+		<td>School</td>
+		<td>Level</td>
+		<td>Overall Score</td>
+		<td>Overall Grade</td>
+		<td>Progress Score</td>
+		<td>Progress Grade</td>
+		<td>Performance Score</td>
+		<td>Performance Grade</td>
+		<td>Environement Score</td>
+		<td>Environment Grade</td>
+	</th>
+	<%= @school_data.each do |t| %>
+		<tr>
+			<td><%= t.district_num %></td>
+			<td><%= t.school_name %></td>
+			<td><%= t.school_level %></td>
+			<td><%= t.overall_score %></td>
+			<td><%= t.overall_grade %></td>
+			<td><%= t.progress_score %></td>
+			<td><%= t.progress_grade %></td>
+			<td><%= t.performance_score %></td>
+			<td><%= t.performance_grade %></td>
+			<td><%= t.environment_score %></td>
+			<td><%= t.environment_grade %></td>
+		</tr>
+	<% end %>
+</table>

@@ -1,16 +1,16 @@
 development:
-  adapter: postgresql
+  adapter: postgis
   encoding: unicode
   database: best_nyc_schools_development
   pool: 5
-  # postgis_extension: postgis
-  # schema_search_path: '"$user", public, postgis'
+  postgis_extension: postgis
+  schema_search_path: '"$user", public, postgis'
 
 test:
-  adapter: postgresql
+  adapter: postgis
   encoding: unicode
   database: best_nyc_schools_test
   pool: 5
-  # postgis_extension: postgis
-  # schema_search_path: '"$user", public, postgis'
+  postgis_extension: postgis
+  schema_search_path: '"$user", public, postgis'
 
