@@ -1,10 +1,10 @@
-class RGeo::Geos::CAPIPointImpl
+# class RGeo::Geos::CAPIPointImpl
 
-  alias_method :lat, :y
-  alias_method :latitude, :y
+#   alias_method :lat, :y
+#   alias_method :latitude, :y
 
-  alias_method :lon, :x
-  alias_method :lng, :x
-  alias_method :longitude, :x
+#   alias_method :lon, :x
+#   alias_method :lng, :x
+#   alias_method :longitude, :x
 
-end
+# end
