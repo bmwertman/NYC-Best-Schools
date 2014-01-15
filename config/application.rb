@@ -26,7 +26,8 @@ class ActiveRecordOverrideRailtie < Rails::Railtie
   initializer "active_record.initialize_database.override" do |app|
 
     ActiveSupport.on_load(:active_record) do
-      if url = ENV['DATABASE_URL']
+        puts ENV.keys
+      if url = ENV['HEROKU_POSTGRESQL_MAROON_URL']
         puts "DB URL = #{url}"
         ActiveRecord::Base.connection_pool.disconnect!
         parsed_url = URI.parse(url)
