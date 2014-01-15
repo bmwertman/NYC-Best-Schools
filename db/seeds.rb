@@ -8,7 +8,9 @@ CSV.foreach(File.path(Rails.root.join('lib', "ES_Zones_2013-2014.csv"))) do |col
 end
 
 CSV.foreach(File.path(Rails.root.join('lib', "primary_schools.csv"))) do |column|
-  SchoolZone.find_by_dbn_num(column[0]).update_attributes({
+  sz = SchoolZone.find_by_dbn_num(column[0])
+  if sz
+    sz.update_attributes({
     district_num: column[1],
     school_name: column[2],
     school_level: column[3],
@@ -21,5 +23,6 @@ CSV.foreach(File.path(Rails.root.join('lib', "primary_schools.csv"))) do |column
     environment_score: column[13],
     environment_grade: column[14]
     })
+end
 end
 
