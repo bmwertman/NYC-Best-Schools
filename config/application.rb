@@ -27,6 +27,7 @@ class ActiveRecordOverrideRailtie < Rails::Railtie
 
     ActiveSupport.on_load(:active_record) do
       if url = ENV['DATABASE_URL']
+        puts "DB URL = #{url}"
         ActiveRecord::Base.connection_pool.disconnect!
         parsed_url = URI.parse(url)
         config =  {
