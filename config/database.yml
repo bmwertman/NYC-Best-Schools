@@ -1,5 +1,5 @@
 development:
-  adapter: postgis
+  adapter: postgresql
   encoding: unicode
   database: best_nyc_schools_development
   pool: 5
@@ -9,7 +9,7 @@ development:
   # schema_search_path: '"$user", public, postgis'
 
 test:
-  adapter: postgis
+  adapter: postgresql
   encoding: unicode
   database: best_nyc_schools_test
   pool: 5
