@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140114235207) do
+ActiveRecord::Schema.define(:version => 20140115005412) do
 
   create_table "apartments", :force => true do |t|
     t.integer  "school_zone_id"
