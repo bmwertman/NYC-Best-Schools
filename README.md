@@ -1,5 +1,5 @@
 #Best Schools NYC 
-####Heroku: <http://nyc-best-schools.herokuapp.com/>
+####Heroku: <http://powerful-sands-8025.herokuapp.com/apartments>
 
 #####This app is a tool for parents to find an apartment in the best school zone for their children.
 
