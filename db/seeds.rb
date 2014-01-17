@@ -1,3 +1,5 @@
+SchoolZone.delete_all
+
 require 'csv'
 CSV.foreach(File.path(Rails.root.join('lib', "ES_Zones_2013-2014.csv"))) do |column|
   SchoolZone.create({
@@ -25,4 +27,6 @@ CSV.foreach(File.path(Rails.root.join('lib', "primary_schools.csv"))) do |column
     })
 end
 end
+
+SchoolZone.all.each { |zone| zone.destroy unless zone.school_name }
 

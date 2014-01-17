@@ -9,6 +9,8 @@ gem 'pg'
 gem 'rgeo'
 gem 'activerecord-postgis-adapter'
 
+gem 'simplecov', :require => false, :group => :test
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -25,6 +27,11 @@ gem 'jquery-rails'
 gem 'rspec-rails'
 gem 'capybara'
 gem 'devise'
+
+gem "gmaps4rails", "~> 2.1.1"
+gem "underscore-rails"
+gem 'geocoder'
+
 
 gem 'pry'
 gem 'pry-nav'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140115211935) do
+ActiveRecord::Schema.define(:version => 20140116021850) do
 
   create_table "apartments", :force => true do |t|
     t.integer  "school_zone_id"
@@ -19,18 +19,13 @@ ActiveRecord::Schema.define(:version => 20140115211935) do
     t.string   "address"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   create_table "districts", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "earthquakes", :force => true do |t|
-    t.decimal  "magnitude",                                           :null => false
-    t.datetime "created_at",                                          :null => false
-    t.datetime "updated_at",                                          :null => false
-    t.spatial  "center",     :limit => {:srid=>4326, :type=>"point"}
   end
 
   create_table "school_zones", :force => true do |t|
@@ -50,7 +45,7 @@ ActiveRecord::Schema.define(:version => 20140115211935) do
     t.string   "performance_grade"
     t.integer  "environment_score"
     t.string   "environment_grade"
-    t.integer  "dbn_num"
+    t.string   "dbn_num"
   end
 
   create_table "user_fave_apartments", :force => true do |t|
